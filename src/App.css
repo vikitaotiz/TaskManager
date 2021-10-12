@@ -3,12 +3,39 @@ body {
   padding: 0;
   font-family: Arial, Helvetica, sans-serif;
   background-color: #ec4c8b;
+  height: 100%;
 }
 
 .header {
   color: white;
   text-align: center;
   justify-content: center;
+  padding: 1%;
+  font-size: 2em;
+}
+
+.header:hover {
+  background-color: #ee317c;
+}
+
+.landing a {
+  text-decoration: none;
+  color: white;
+}
+
+.chart {
+  margin: auto;
+  width: 30%;
+  color: white;
+}
+
+.sides {
+  text-align: center;
+  border: #ee317c solid 1px;
+  font-size: 2em;
   padding: 5%;
-  font-size: 5em;
+}
+
+.sides:hover {
+  background-color: #ee317c;
 }

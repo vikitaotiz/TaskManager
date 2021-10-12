@@ -1,7 +1,11 @@
-const fetchTasksFromApi = async () => {
+export const fetchTasksFromApi = async () => {
   const res = await fetch('https://jsonplaceholder.typicode.com/todos');
   const data = await res.json();
-  return data.splice(0, 10);
+  return data.splice(0, 5);
 };
 
-export default fetchTasksFromApi;
+export const addTaskToApi = async () => {
+  const res = await fetch('https://jsonplaceholder.typicode.com/todos');
+  const data = await res.json();
+  return data.splice(0, 5);
+};
