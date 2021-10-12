@@ -1,3 +1,5 @@
+import { addTaskToApi } from '../apiCalls';
+
 // Action Identifiers
 const FETCH_TASKS = 'FETCH_TASKS';
 const ADD_TASK = 'ADD_TASK';
@@ -21,6 +23,7 @@ export const taskReducers = (state = initialState, action) => {
     case FETCH_TASKS:
       return action.payload;
     case ADD_TASK:
+      addTaskToApi(action.payload);
       return [action.payload, ...state];
     default:
       return state;

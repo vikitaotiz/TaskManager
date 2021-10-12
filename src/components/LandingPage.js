@@ -18,21 +18,23 @@ const LandingPage = () => {
   }, []);
 
   return (
-    <div className="container-fluid landing">
-      <NavLink to="/tasks">
-        <div className="header">
-          <i className="fas fa-tasks ml-2" />
-          {' '}
-          All Tasks
-          {' '}
-          {tasks.length}
-          <hr />
-          <TasksChart />
-        </div>
-      </NavLink>
+    <div className="d-flex flex-column">
+      <div className="header">
+        <NavLink to="/tasks" className="text-decoration-none text-white">
+          <div className="header">
+            <i className="fas fa-tasks ml-2" />
+            {' '}
+            All Tasks
+            {' '}
+            {tasks.length}
+            <hr />
+            <TasksChart />
+          </div>
+        </NavLink>
+      </div>
       <div className="row">
-        <div className="col sides">
-          <NavLink to="/completedtasks">
+        <div className="col-lg-6 col-sm-12 sides">
+          <NavLink to="/completedtasks" className="text-decoration-none text-white">
             <i className="fas fa-list-alt" />
             {' '}
             Completed Tasks
@@ -40,8 +42,8 @@ const LandingPage = () => {
             {completedTasks}
           </NavLink>
         </div>
-        <div className="col sides">
-          <NavLink to="/incompletetasks">
+        <div className="col-lg-6 col-sm-12 sides">
+          <NavLink to="/incompletetasks" className="text-decoration-none text-white">
             <i className="far fa-list-alt" />
             {' '}
             Incomplete Tasks

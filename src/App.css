@@ -11,7 +11,7 @@ body {
   text-align: center;
   justify-content: center;
   padding: 1%;
-  font-size: 2em;
+  font-size: 1.5em;
 }
 
 .header:hover {
@@ -38,4 +38,11 @@ body {
 
 .sides:hover {
   background-color: #ee317c;
+}
+
+.completed {
+  background-color: #f5d0df;
+  font-weight: lighter;
+  color: grey;
+  text-decoration: line-through;
 }

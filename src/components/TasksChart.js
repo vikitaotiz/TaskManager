@@ -1,4 +1,4 @@
-import { Doughnut } from 'react-chartjs-2';
+import { Pie } from 'react-chartjs-2';
 import { useSelector } from 'react-redux';
 
 const TasksChart = () => {
@@ -11,7 +11,7 @@ const TasksChart = () => {
     datasets: [
       {
         label: 'Tasks',
-        backgroundColor: ['#B21F00', '#C9DE00'],
+        backgroundColor: ['#ee317c', '#C9DE00'],
         borderColor: 'rgba(0,0,0,1)',
         borderWidth: 1,
         data: [completedTasks, incompleteTasks],
@@ -21,7 +21,7 @@ const TasksChart = () => {
 
   return (
     <div className="chart">
-      <Doughnut
+      <Pie
         data={state}
         options={{
           title: {
