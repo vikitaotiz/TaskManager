@@ -25,8 +25,6 @@ const AddTask = () => {
     <div>
       <button type="button" className="btn btn-primary btn-dm" data-bs-toggle="modal" data-bs-target="#exampleModal">
         <i className="fas fa-plus-circle" />
-        {' '}
-        Add New Task
       </button>
 
       <div className="modal fade" id="exampleModal" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">

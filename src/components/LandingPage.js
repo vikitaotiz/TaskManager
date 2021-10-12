@@ -18,22 +18,37 @@ const LandingPage = () => {
   }, []);
 
   return (
-    <div className="d-flex flex-column">
-      <div className="header">
+    <div className="wrapper">
+      <div className="header mt-2">
         <NavLink to="/tasks" className="text-decoration-none text-white">
-          <div className="header">
-            <i className="fas fa-tasks ml-2" />
-            {' '}
-            All Tasks
-            {' '}
-            {tasks.length}
-            <hr />
-            <TasksChart />
-          </div>
+          <i className="fas fa-chart-pie" />
+          {' '}
+          Task Manager
+          {' '}
+          {tasks.length}
+          <hr />
+          <TasksChart />
         </NavLink>
       </div>
-      <div className="row">
-        <div className="col-lg-6 col-sm-12 sides">
+      <i className="text-center text-white mt-3">Recent Tasks</i>
+      <div className="row m-0 p-0">
+        {tasks.map((task) => (
+          <NavLink
+            to={{ pathname: 'task', state: { task } }}
+            key={task.id}
+            className={task.completed ? 'col-6 col-lg-4 task complete-task text-decoration-none'
+              : 'col-6 col-lg-4 task text-decoration-none'}
+          >
+            <div>
+              <small className="text-decoration-none status">{task.completed ? 'Completed' : 'Pending'}</small>
+              <br />
+              <small>{task.title}</small>
+            </div>
+          </NavLink>
+        ))}
+      </div>
+      <div className="row m-0 p-0">
+        <div className="col-6 sides">
           <NavLink to="/completedtasks" className="text-decoration-none text-white">
             <i className="fas fa-list-alt" />
             {' '}
@@ -42,11 +57,11 @@ const LandingPage = () => {
             {completedTasks}
           </NavLink>
         </div>
-        <div className="col-lg-6 col-sm-12 sides">
+        <div className="col-6 sides">
           <NavLink to="/incompletetasks" className="text-decoration-none text-white">
             <i className="far fa-list-alt" />
             {' '}
-            Incomplete Tasks
+            Pending Tasks
             {' '}
             {incompleteTasks}
           </NavLink>

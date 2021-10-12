@@ -5,6 +5,7 @@ import LandingPage from './components/LandingPage';
 import TaskList from './components/TaskList';
 import CompletedTasks from './components/CompletedTasks';
 import IncompleteTasks from './components/IncompleteTasks';
+import Task from './components/Task';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <Route path="/tasks" exact component={TaskList} />
       <Route path="/completedtasks" exact component={CompletedTasks} />
       <Route path="/incompletetasks" exact component={IncompleteTasks} />
+      <Route path="/task" exact component={Task} />
     </Router>
   );
 }

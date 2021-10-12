@@ -13,13 +13,12 @@ const TaskList = () => {
           {' '}
           Back
         </NavLink>
-        <b className="text-white">
-          All Tasks
-        </b>
+        <b className="text-decoration-none text-white">All Tasks</b>
         <span>
           <AddTask />
         </span>
       </div>
+
       <hr />
       <ul className="list-group">
         {tasks.length > 0 ? tasks.map((task) => (

@@ -1,4 +1,4 @@
-import { Pie } from 'react-chartjs-2';
+import { Doughnut } from 'react-chartjs-2';
 import { useSelector } from 'react-redux';
 
 const TasksChart = () => {
@@ -7,12 +7,13 @@ const TasksChart = () => {
   const incompleteTasks = (tasks.filter((val) => !val.completed)).length;
 
   const state = {
-    labels: ['Completed Tasks', 'Incomplete Task'],
+    labels: ['Completed Tasks', 'Pending Tasks'],
     datasets: [
       {
         label: 'Tasks',
-        backgroundColor: ['#ee317c', '#C9DE00'],
-        borderColor: 'rgba(0,0,0,1)',
+        backgroundColor: ['#c50552', '#C9DE00'],
+        borderColor: '#c50552',
+        color: '#fff',
         borderWidth: 1,
         data: [completedTasks, incompleteTasks],
       },
@@ -21,19 +22,8 @@ const TasksChart = () => {
 
   return (
     <div className="chart">
-      <Pie
+      <Doughnut
         data={state}
-        options={{
-          title: {
-            display: true,
-            text: 'All Tasks',
-            fontSize: 20,
-          },
-          legend: {
-            display: true,
-            position: 'right',
-          },
-        }}
       />
     </div>
   );

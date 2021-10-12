@@ -4,14 +4,21 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   background-color: #ec4c8b;
   height: 100%;
+  box-sizing: border-box;
 }
 
 .header {
   color: white;
   text-align: center;
   justify-content: center;
-  padding: 1%;
   font-size: 1.5em;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  justify-content: space-between;
 }
 
 .header:hover {
@@ -25,15 +32,26 @@ body {
 
 .chart {
   margin: auto;
-  width: 30%;
+  width: 300px;
   color: white;
 }
 
 .sides {
   text-align: center;
-  border: #ee317c solid 1px;
-  font-size: 2em;
+  background-color: #bb054e;
+  font-size: 1em;
+  padding: 3%;
+}
+
+.task {
+  border: #f72076 solid 1px;
+  color: #fff;
   padding: 5%;
+  text-align: center;
+}
+
+.complete-task {
+  background-color: #ee317c;
 }
 
 .sides:hover {
@@ -45,4 +63,11 @@ body {
   font-weight: lighter;
   color: grey;
   text-decoration: line-through;
+}
+
+.status {
+  background-color: #c9df00;
+  border-radius: 3px;
+  padding: 2px;
+  color: #bb054e;
 }

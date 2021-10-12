@@ -14,7 +14,7 @@ const CompletedTasks = () => {
           Back
         </NavLink>
         <b className="text-white">
-          Incomplete Tasks
+          Pending Tasks
         </b>
         <span>{' '}</span>
       </div>
