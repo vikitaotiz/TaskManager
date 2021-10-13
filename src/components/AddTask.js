@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { v4 as uuidv4 } from 'uuid';
+import crypto from 'crypto';
 import { addTask } from '../redux/tasks/tasks';
 
 const AddTask = () => {
@@ -11,7 +11,7 @@ const AddTask = () => {
     if (title) {
       const data = {
         userId: 1,
-        id: uuidv4,
+        id: crypto.randomBytes(16).toString('hex'),
         title,
         completed: false,
       };

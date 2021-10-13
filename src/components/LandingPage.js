@@ -34,7 +34,7 @@ const LandingPage = () => {
       <div className="row m-0 p-0">
         {tasks.map((task) => (
           <NavLink
-            to={{ pathname: 'task', state: { task } }}
+            to={`/${task.id}`}
             key={task.id}
             className={task.completed ? 'col-6 col-lg-4 task complete-task text-decoration-none'
               : 'col-6 col-lg-4 task text-decoration-none'}

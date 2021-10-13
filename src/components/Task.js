@@ -1,8 +1,7 @@
-import { NavLink, useLocation } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
-const Task = () => {
-  const location = useLocation();
-  const { title, completed } = location.state.task;
+const Task = ({ task }) => {
+  const { title, completed } = task;
   return (
     <div className="container mt-3">
       <div className="mb-4 d-flex justify-content-between">
