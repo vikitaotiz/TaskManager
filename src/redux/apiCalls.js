@@ -9,6 +9,5 @@ export const addTaskToApi = async (task) => {
     method: 'POST',
     headers: { 'Content-type': 'application/json; charset=UTF-8' },
     body: JSON.stringify(task),
-  }).then((res) => res.json())
-    .then((data) => console.log('From react ', data));
+  }).then((res) => res.json());
 };
