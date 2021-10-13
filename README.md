@@ -14,11 +14,12 @@ tasks both completed and pending. A user can navigate to a list of all tasks, si
 - Javascript
 
 # Demo Links
-[Demo Link](https://henrykc24.github.io/space-travellers)
+[Demo Link](https://silly-leavitt-8297a5.netlify.app/)
 
 # Screenshot
 ------------
-![print](https://user-images.githubusercontent.com/42869046/136209541-971f1fda-a94a-4535-9f2c-fbba401666c6.JPG)
+![print](https://user-images.githubusercontent.com/42869046/137223775-e9035b44-92be-494b-9d70-eb44ed9b5c40.JPG)
+
 
 ## Getting Started
 
