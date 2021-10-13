@@ -28,8 +28,6 @@ const TaskList = () => {
               : 'list-group-item rounded-0 mb-2 d-flex justify-content-between align-items-start'}
           >
             <div className="ms-2 me-auto">
-              <input type="checkbox" name="" id="" />
-              {' '}
               <b>{task.title}</b>
             </div>
             <span>{task.completed ? 'Completed' : 'Pending'}</span>

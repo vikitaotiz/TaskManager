@@ -2,24 +2,29 @@ import { NavLink } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
 import { fetchTasksFromApi } from '../redux/apiCalls';
-import { fetchTasks } from '../redux/tasks/tasks';
+import { fetchTasks, completedTasks, incompleteTasks } from '../redux/tasks/tasks';
 import TasksChart from './TasksChart';
 
 const LandingPage = () => {
   const dispatch = useDispatch();
-
   const tasks = useSelector((state) => state.tasks);
-  const completedTasks = (tasks.filter((val) => val.completed)).length;
-  const incompleteTasks = (tasks.filter((val) => !val.completed)).length;
+
+  const completedtasks = (tasks.filter((val) => val.completed)).length;
+  const incompletetasks = (tasks.filter((val) => !val.completed)).length;
 
   useEffect(async () => {
     const data = await fetchTasksFromApi();
     dispatch(fetchTasks(data));
   }, []);
 
+  const getData = async () => {
+    const data = await fetchTasksFromApi();
+    dispatch(fetchTasks(data));
+  };
+
   return (
     <div className="wrapper">
-      <div className="header mt-2">
+      <div className="header mt-2 mb-4">
         <NavLink to="/tasks" className="text-decoration-none text-white">
           <i className="fas fa-chart-pie" />
           {' '}
@@ -30,12 +35,34 @@ const LandingPage = () => {
           <TasksChart />
         </NavLink>
       </div>
-      <div className="row text-center mt-2">
+      <div className="row text-center text-white m-0 p-0">
         <div className="col">
-          Test
+          <small>
+            <button onClick={() => dispatch(completedTasks())} type="button" className="btn btn-link text-decoration-none text-white  btn-sm">
+              <i className="fas fa-filter" />
+              {' '}
+              Complete
+            </button>
+          </small>
         </div>
-        <div className="col">Recent Tasks</div>
-        <div className="col">Test</div>
+        <div className="col">
+          <small>
+            <button type="button" onClick={() => getData()} className="btn btn-link text-decoration-none text-white  btn-sm">
+              <i className="fas fa-sync-alt" />
+              {' '}
+              Refresh
+            </button>
+          </small>
+        </div>
+        <div className="col">
+          <small>
+            <button onClick={() => dispatch(incompleteTasks())} type="button" className="btn btn-link text-decoration-none text-white  btn-sm">
+              <i className="fas fa-filter" />
+              {' '}
+              Pending
+            </button>
+          </small>
+        </div>
       </div>
       <div className="row m-0 p-0">
         {tasks.map((task) => (
@@ -60,7 +87,7 @@ const LandingPage = () => {
             {' '}
             Completed Tasks
             {' '}
-            {completedTasks}
+            {completedtasks}
           </NavLink>
         </div>
         <div className="col-6 sides">
@@ -69,7 +96,7 @@ const LandingPage = () => {
             {' '}
             Pending Tasks
             {' '}
-            {incompleteTasks}
+            {incompletetasks}
           </NavLink>
         </div>
       </div>

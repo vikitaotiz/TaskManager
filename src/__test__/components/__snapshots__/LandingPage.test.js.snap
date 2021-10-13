@@ -5,7 +5,7 @@ exports[`should render correctly 1`] = `
   className="wrapper"
 >
   <div
-    className="header mt-2"
+    className="header mt-2 mb-4"
   >
     <a
       aria-current={null}
@@ -34,11 +34,61 @@ exports[`should render correctly 1`] = `
       </div>
     </a>
   </div>
-  <i
-    className="text-center text-white mt-3"
+  <div
+    className="row text-center text-white m-0 p-0"
   >
-    Recent Tasks
-  </i>
+    <div
+      className="col"
+    >
+      <small>
+        <button
+          className="btn btn-link text-decoration-none text-white  btn-sm"
+          onClick={[Function]}
+          type="button"
+        >
+          <i
+            className="fas fa-filter"
+          />
+           
+          Complete
+        </button>
+      </small>
+    </div>
+    <div
+      className="col"
+    >
+      <small>
+        <button
+          className="btn btn-link text-decoration-none text-white  btn-sm"
+          onClick={[Function]}
+          type="button"
+        >
+          <i
+            className="fas fa-sync-alt"
+          />
+           
+          Refresh
+        </button>
+      </small>
+    </div>
+    <div
+      className="col"
+    >
+      <small>
+        <button
+          className="btn btn-link text-decoration-none text-white  btn-sm"
+          onClick={[Function]}
+          type="button"
+        >
+          <i
+            className="fas fa-filter"
+          />
+           
+          Incomplete
+        </button>
+      </small>
+    </div>
+  </div>
   <div
     className="row m-0 p-0"
   />

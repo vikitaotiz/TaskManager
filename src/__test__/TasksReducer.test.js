@@ -1,24 +1,24 @@
 import { fetchTasksFromApi } from '../redux/apiCalls';
 import { fetchTasks, taskReducers } from '../redux/tasks/tasks';
 
-const data = [
+const mockData = [
   { id: 1, title: 'Task One', userId: 1 },
   { id: 2, title: 'Task Two', userId: 1 },
 ];
 
 const action = {
   type: 'FETCH_TASKS',
-  payload: data,
+  payload: mockData,
 };
 
 describe('Should test task reducer', () => {
   it('Should return an array on api call', async () => {
-    const data = await fetchTasksFromApi();
-    expect(data.length).toBeGreaterThan(0);
+    const mockData = await fetchTasksFromApi();
+    expect(mockData.length).toBeGreaterThan(0);
   });
 
   it('Should return an object', () => {
-    expect(fetchTasks(data)).toBeInstanceOf(Object);
+    expect(fetchTasks(mockData)).toBeInstanceOf(Object);
   });
 
   it('Should return an array when fetch tasks in task reducer is called', () => {
