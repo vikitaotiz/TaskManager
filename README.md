@@ -6,6 +6,8 @@ tasks both completed and pending. A user can navigate to a list of all tasks, si
 ## Built With
 
 - Html
+- Bootstrap
+- Chart.js
 - Css
 - React
 - Redux
