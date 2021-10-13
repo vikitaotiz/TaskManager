@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render correctly 1`] = `
+<div
+  className="container mt-3"
+>
+  <div
+    className="mb-4 d-flex justify-content-between"
+  >
+    <a
+      aria-current="page"
+      className="text-decoration-none text-white active"
+      href="/"
+      onClick={[Function]}
+      style={Object {}}
+    >
+      <i
+        className="fas fa-arrow-left"
+      />
+       
+      Back
+    </a>
+    <b
+      className="text-decoration-none text-white"
+    >
+      Single Task
+    </b>
+    <span>
+       
+    </span>
+  </div>
+  <div
+    className="card rounded-0 p-3 mb-2"
+  >
+    Task One
+  </div>
+  <small
+    className="card rounded-0 p-1"
+  >
+    <i>
+      Incomplete
+    </i>
+  </small>
+</div>
+`;

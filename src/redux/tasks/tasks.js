@@ -5,7 +5,6 @@ const FETCH_TASKS = 'FETCH_TASKS';
 const ADD_TASK = 'ADD_TASK';
 const COMPLETED_TASKS = 'COMPLETED_TASKS';
 const INCOMPLETE_TASKS = 'INCOMPLETE_TASKS';
-
 // Action Creators
 export const fetchTasks = (tasks) => ({
   type: FETCH_TASKS,

@@ -30,7 +30,13 @@ const LandingPage = () => {
           <TasksChart />
         </NavLink>
       </div>
-      <i className="text-center text-white mt-3">Recent Tasks</i>
+      <div className="row text-center mt-2">
+        <div className="col">
+          Test
+        </div>
+        <div className="col">Recent Tasks</div>
+        <div className="col">Test</div>
+      </div>
       <div className="row m-0 p-0">
         {tasks.map((task) => (
           <NavLink
