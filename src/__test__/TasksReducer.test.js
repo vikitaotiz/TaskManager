@@ -13,8 +13,8 @@ const action = {
 
 describe('Should test task reducer', () => {
   it('Should return an array on api call', async () => {
-    const mockData = await fetchTasksFromApi();
-    expect(mockData.length).toBeGreaterThan(0);
+    const data = await fetchTasksFromApi();
+    expect(data.length).toBeGreaterThan(0);
   });
 
   it('Should return an object', () => {

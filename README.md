@@ -52,6 +52,7 @@ Feel free to contribute
 Give a ⭐️ if you like this project!
 
 ## Acknowledgments
+- Thanks to Nelson Sakwa of [Behance](https://www.behance.net/gallery/31579789/Ballhead-App-%28Free-PSDs%29) for the amazing website design that this project is based on.
 - We remain indepted to the Facebook team that develop create-react-app and React Redux as open source.
 - I would also like to give a special thanks to developers behind chart.js for an amazing work. I've integrated it to my application and I love it. 
 - A special thanks to Microverse for inspiring this project. We really appreciate.
